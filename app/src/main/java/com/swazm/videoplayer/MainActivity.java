@@ -13,7 +13,7 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         Intent intent = new Intent(getApplicationContext(), com.swazm.swazmplayer.Player.class);
-        intent.putExtra("videoUrl", "http://vjs.zencdn.net/v/oceans.mp4");
+        intent.putExtra("videoUrl", "http://download.blender.org/peach/bigbuckbunny_movies/big_buck_bunny_480p_surround-fix.avi");
         startActivity(intent);
     }
 }

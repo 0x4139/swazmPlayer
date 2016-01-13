@@ -11,6 +11,8 @@ import android.view.Surface;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.FrameLayout;
 import android.view.SurfaceHolder.Callback;
 
@@ -46,6 +48,8 @@ public class Player extends Activity implements IVideoPlayer {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_player);
         _surfaceView = (SurfaceView) findViewById(R.id.player_surface);
         _surfaceHolder = _surfaceView.getHolder();
